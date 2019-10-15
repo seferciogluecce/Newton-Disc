@@ -360,8 +360,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758867784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7584648, y: 2.644146, z: 0.66}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 984966309}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMultiplier: 12
-  maxAngularVelocity: 40
+  maxAngularVelocity: 150
 --- !u!4 &984966309
 Transform:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984966307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7584648, y: -2.644146, z: 0.054416656}
+  m_LocalPosition: {x: 0, y: 0, z: 5.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 758867785}
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96aac6505d8ecf14ebf83281baa942b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMultiplier: 12
+  forceMultiplier: 5
   maxAngularVelocity: 40
 --- !u!136 &1773172165
 CapsuleCollider:

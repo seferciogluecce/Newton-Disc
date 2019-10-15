@@ -41,18 +41,17 @@ Shader "Custom/SpinBlur"{
 		}
 
 		void surf(Input IN, inout SurfaceOutput o) {
-			const float Deg2Rad = (UNITY_PI * 2.0) / 360.0;
-			const float Rad2Deg = 180.0 / UNITY_PI;
 			float2 vUv = IN.uv_MainTex;
 			float2 coord = vUv;
 			float4 FragColor = float4(0.0, 0.0, 0.0, 0.0);
 			int samp = _Samples;
 			if (samp <= 0) samp = 1;
+			float rotationAngle = (float)_Angle / (float)samp;
+			float sampleWeight = 1.0 / samp;
 			for (float i = 0; i < samp; i++) {
-				float a = (float)_Angle / (float)samp;
-				coord = rotateUV(coord, a);
+				coord = rotateUV(coord, rotationAngle);
 				float4 texel = tex2D(_MainTex, coord);
-				texel *= 1.0 / samp;
+				texel *= sampleWeight;
 				FragColor += texel;
 			}
 			float4 c = FragColor * _Color;
